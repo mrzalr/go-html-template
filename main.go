@@ -8,6 +8,7 @@ import (
 	"path"
 	"strconv"
 	"strings"
+	"os"
 )
 
 func main() {
@@ -15,7 +16,8 @@ func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/parse-num", parseNum)
 
-	http.ListenAndServe(":8080", nil)
+	port := fmt.Sprintf(":%s". os.Getenv("PORT"))
+	http.ListenAndServe(port, nil)
 }
 
 func index(w http.ResponseWriter, r *http.Request) {
