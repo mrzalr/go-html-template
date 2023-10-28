@@ -16,7 +16,7 @@ func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/parse-num", parseNum)
 
-	port := fmt.Sprintf(":%s". os.Getenv("PORT"))
+	port := fmt.Sprintf(":%s", os.Getenv("PORT"))
 	http.ListenAndServe(port, nil)
 }
 
