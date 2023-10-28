@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+    <title>Number formatter</title>
+</head>
+<body class="h-screen w-screen flex flex-col items-center p-12">
+    <h1 class="text-2xl font-medium">Number formatter</h1>
+    <div class=" w-full h-full p-4 flex gap-12">
+        <div class="flex-1 flex flex-col items-center gap-2 my-4">
+            <label class="text-lg font-thin" for="input-num">Masukkan nomor disini `ex. 82200238932`</label>
+            <textarea class="flex-1 w-full p-4 font-thin resize-none border-2 rounded-xl" name="input" id="input-num"></textarea>
+            <div class="flex gap-8 text-gray-500 hidden" id="meta">
+                <p id="input-count">count: 0</p>
+                <p id="input-invalid-count">invalid: 0</p>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <button id="conv-btn" class="bg-blue-400 rounded-xl px-4 py-2 text-white">convert ></button>
+        </div>
+        <div class="flex-1 flex flex-col items-center gap-2 my-4">
+            <label class="text-lg font-thin" for="output-num">Hasil convert</label>
+            <textarea class="flex-1 w-full p-4 font-thin resize-none border-2 rounded-xl" name="output" id="output-num" readonly></textarea>
+            <div class="text-gray-500 hidden" id="meta">
+                <p id="output-count">count: 0</p>
+            </div>
+        </div>
+    </div>
+    <button id="download-btn" class="bg-green-400 rounded-xl px-4 py-2 text-white">Download .txt</button>    
+    <script src="static/main.js"></script>
+</body>
+</html>
